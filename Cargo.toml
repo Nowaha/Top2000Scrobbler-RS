@@ -1,0 +1,11 @@
+[package]
+name = "Top2000Scrobbler"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+reqwest = { version = "0.12.9", features = ["blocking", "json"] }
+serde_json = "1.0.134"
+rustfm-scrobble="1.1"
+dotenv = "0.15.0"
+discord_game_sdk = {  version = "1.0.1" }
