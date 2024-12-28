@@ -1,5 +1,8 @@
+use std::io::Write;
+
 pub fn clear() {
     print!("{esc}c", esc = 27 as char);
+    std::io::stdout().flush().unwrap();
 }
 
 pub fn get_str_or_default(json: &serde_json::Value, key: &str, default: &str) -> String {
