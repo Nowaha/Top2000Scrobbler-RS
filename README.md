@@ -15,10 +15,22 @@ There are also 2 optional variables to speed up the login. If you don't set thes
 The application supports the creation of a `.env` file containing these values.
 
 ### Discord SDK
-You need to have the Discord SDK downloaded and need to have 2 values set to both build the project and run the program.
+#### To run
+To run, you need to have a single file from the Discord SDK. These are included in [the releases](https://github.com/Nowaha/Top2000Scrobbler-RS/releases), but can be found [here](https://discord.com/developers/docs/developer-tools/game-sdk) for a manual download. Windows needs `v2.5.6`, but Linux and MacOS work with either `v2.5.6` or `v3.x+`.
+
+Depending on your OS, take the following file:
+- Windows: `discord_game_sdk/lib/x86_64/discord_game_sdk.dll`
+- Linux: `discord_game_sdk/lib/x86_64/libdiscord_game_sdk.so` (might need to rename and prepend 'lib')
+- MacOS: `discord_game_sdk/lib/x86_64/libdiscord_game_sdk.dylib` (might need to rename and prepend 'lib')
+
+And place it in the same directory as the executable to run.
+#### To build
+You need to have the Discord SDK downloaded and need to have 2 values set to build the project.
 
 **In short:**
-1. Download the latest version of the SDK from [here](https://discord.com/developers/docs/game-sdk/sdk-starter-guide#downloading-the-sdk).
+1. Download the Discord Game SDK from [here](https://discord.com/developers/docs/game-sdk/sdk-starter-guide#downloading-the-sdk).
+   - Windows needs `v2.5.6`
+   - Linux/MacOS work with either `v2.5.6` or `v3.x`
 2. Extract it.
 3. Set the `DISCORD_GAME_SDK_PATH` environment variable to the path of the extracted SDK.
 4. Depending on your OS, run / set in your environment:
